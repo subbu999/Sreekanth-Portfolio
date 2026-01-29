@@ -57,6 +57,7 @@
   }
 }
 
+// Key frames animations
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -114,7 +115,7 @@
 }
 
 
-
+// responsive styles
 @media (max-width: 768px) {
   .loading-text span {
     animation-duration: 1.1s;
