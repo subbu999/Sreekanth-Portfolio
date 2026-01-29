@@ -57,7 +57,7 @@
   }
 }
 
-// Key frames animations
+/* Key frames animations*/
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -67,7 +67,6 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-
 @keyframes letterMove {
   0% {
     opacity: 0;
