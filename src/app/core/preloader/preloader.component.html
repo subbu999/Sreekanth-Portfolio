@@ -1,0 +1,8 @@
+<div class="preloader">
+    <div class="spinner"></div>
+    <div class="loading-text">
+        <span *ngFor="let char of letters;let i=index" [style.animationDelay]="i*0.1+'s'">
+            {{char}}
+        </span>
+    </div>
+</div>
