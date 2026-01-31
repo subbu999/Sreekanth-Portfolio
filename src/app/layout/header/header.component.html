@@ -1,0 +1,48 @@
+<header class="header">
+    <div class="header-container">
+        <!-- logo -->
+        <div class="logo">
+            <img src="/img/logo-svg.svg" alt="">
+        </div>
+        <!-- Navigation -->
+        <nav class="nav desktop-nav">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!-- Lets talk Button-->
+        <button class="cta-btn desktop-cta-btn">Let's Talk</button>
+
+        <!-- Mobile Menu Toggle Button-->
+        <button class="menu-toggler" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- Mobile Overlay Menu -->
+        <div class="mobile-menu" [class.open]="menuOpen">
+            <!-- Overlay Header -->
+            <div class="mobile-menu-header">
+                <img src="/img/logo-svg.svg" alt="Logo" />
+                <button class="close-btn" (click)="closeMenu()">✕</button>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="mobile-nav">
+                <a href="#home" (click)="closeMenu()">Home</a>
+                <a href="#services" (click)="closeMenu()">Services</a>
+                <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+                <a href="#resume" (click)="closeMenu()">Resume</a>
+                <a href="#contact" (click)="closeMenu()">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="mobile-cta-wrapper">
+                <button class="cta-btn">Let’s Talk</button>
+            </div>
+
+        </div>
+    </div>
+</header>

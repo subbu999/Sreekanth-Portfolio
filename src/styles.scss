@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+// Reset Styles
+
+// Base reset
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+:root {
+  /* Colors – Antux Light */
+  --bg-main: #f8f9fb;
+  --bg-section: #ffffff;
+  --text-primary: #2a1b0f;
+  --text-secondary: #64748b;
+  --accent: #ff7a00;
+
+  /* Typography */
+  --font-main: 'Poppins', system-ui, sans-serif;
+
+  /* Layout */
+  --container-width: 1140px;
+  --section-padding: 120px;
+}
+
+/* =========================
+   GLOBAL BASE STYLES
+========================= */
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+
+  overflow-x: hidden;
+}

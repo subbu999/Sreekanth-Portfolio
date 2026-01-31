@@ -1,24 +1,11 @@
-// Reset Styles
 
-*,*::before,*::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+:host {
+  display: block;
+  min-height: 100vh;
 }
 
-// Variables
-:root{
-    --primary: #0e1b2c;
-  --secondary: #ff5a3c;
-  --text-dark: #1c1c1c;
-  --text-light: #ffffff;
-  --bg-light: #f7f9fc;
-}
-
-// base styles
-body{
-    font-family: 'Inter',sans-serif;
-    background: var(--bg-light);
-    color: var(--text-dark);
-    overflow-x: hidden;
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
 }

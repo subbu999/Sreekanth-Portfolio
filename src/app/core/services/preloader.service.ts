@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 export class PreloaderService {
 loading=signal(true);
-private MIN_DURATION = 2800; 
+private MIN_DURATION = 1500; 
 hide() {
     const start = performance.now();
 

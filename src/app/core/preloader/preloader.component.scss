@@ -1,7 +1,7 @@
 .preloader {
   position: fixed;
   inset: 0;// sets top,bottom,left and right to 0
-  background: #0e1b2c;
+  background: linear-gradient(to bottom right, #0038B3, #48AB3F);
   display: flex;
   flex-direction: column;
   justify-content: center;
