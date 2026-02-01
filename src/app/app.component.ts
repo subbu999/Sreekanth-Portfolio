@@ -4,11 +4,18 @@ import { NgIf } from '@angular/common';
 import { PreloaderComponent } from './core/preloader/preloader.component';
 import { PreloaderService } from './core/services/preloader.service';
 import { HeaderComponent } from './layout/header/header.component';
+import { HeroComponent } from './sections/hero/hero.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NgIf, PreloaderComponent,HeaderComponent],
+  imports: [
+    RouterOutlet,
+    NgIf, 
+    PreloaderComponent,
+    HeaderComponent,
+    HeroComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

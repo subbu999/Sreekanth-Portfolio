@@ -1,0 +1,174 @@
+.hero-section{
+  margin-top:50px ;
+    padding: 80px 20px;
+}
+.hero-grid{
+    max-width: var(--container-width);
+    margin: 0 auto;
+    // Grid 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* LEFT COLUMN */
+.hero-content {
+  padding-top: 5rem;
+  max-width: 680px;
+  align-self:center;
+}
+
+/* Eyebrow */
+.hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Title */
+.hero-title {
+  width: fit-content;
+  border: 2px solid #ccc;
+  border-radius: 10px; 
+  padding: 10px; 
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  .hero-typing{
+    color: var(--theme-color2);
+    .cursor{
+    color: var(--theme-color1);
+    }
+  }
+
+}
+/* Typing */
+.hero-typing {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cursor {
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+/* Description */
+.hero-description {
+  max-width: 520px;
+  margin-bottom: 32px;
+
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+// Hir me button styles
+.cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--theme-color1), var(--theme-color2));
+  color: #fff;
+}
+/* TEXT PART */
+.cta-text {
+  padding: 16px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+}
+/* ARROW PART */
+.cta-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* DIAGONAL CUT */
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 56px;
+
+  width: 2px;
+  height: 100%;
+
+  background: #ffffff;
+  transform: skewX(-20deg);
+  transform-origin: top;
+  z-index: 1;
+}
+/* HOVER EFFECTS */
+.cta-btn:hover .cta-icon {
+  transform: translate(4px,-4px);
+  transition: transform 0.3s ease-out;
+}
+
+
+/* RIGHT COLUMN (IMAGE) */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cursor animation */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-content: center;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-image {
+    justify-content: flex-start;
+  }
+  .hero-title {
+    font-size: 1.4rem;
+  }
+}
