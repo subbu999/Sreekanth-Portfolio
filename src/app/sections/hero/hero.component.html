@@ -1,5 +1,6 @@
 <section id="home" class="hero-section">
-    <div class="hero-grid">
+    <!-- block 1 -->
+    <div class="hero-intro">
         <div class="hero-content">
             <div class="hero-eyebrow" style="display: flex;align-items: center;"> Hey<img src="img/hi.png" height="45px"
                     class="hi-img" /> &nbsp;I'm Sreekanth
@@ -11,10 +12,7 @@
                 doloremque facere aliquid praesentium odio atque magni! Quam, culpa perspiciatis dolorem tenetur error
                 nihil nostrum atque nisi natus porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis saepe
                 magnam provident, illo aliquid dolorum exercitationem ea atque beatae vel! Lorem ipsum dolor sit Lorem
-                ipsum dolor, sit amet consectetur adipisicing elit. Adipisci sequi tempora laboriosam quam. Culpa
-                expedita deserunt mollitia. Consequuntur, sequi voluptatem. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Illo blanditiis commodi culpa fugiat ad repellendus dolores deserunt ipsum, sit
-                placeat.</p>
+                ipsum dolor, sit amet consectetur adipisicing elit. Adipisci sequi tempora laboriosam quam. lorem100</p>
 
             <button class="cta-btn">
                 <span class="cta-text">Hire Me Now</span>
@@ -31,6 +29,36 @@
         </div>
         <div class="hero-image">
             <img src="img/hero.png" alt="Hero image" />
+        </div>
+    </div>
+    <!-- block 2 -->
+    <div class="hero-stats" #statsBlock>
+        <div class="stats-cards">
+            <div class="stat-card">
+                <div class="stat-number">{{ experienceCount }}+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ projectsCount }}+</div>
+                <div class="stat-label">Projects completed</div>
+            </div>
+        </div>
+        <div class="stats-content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quaerat repellat quas perferendis quo
+                officiis optio incidunt soluta, blanditiis maiores id similique doloremque, esse consequuntur tenetur et
+                vel eius? Provident?</p>
+            <button class="cta-btn secondary">
+                <span class="cta-text">Learn More</span>
+                <span class="cta-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="cta-arrow">
+                        <path d="M7 17L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M7 7H17V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </button>
         </div>
     </div>
 </section>
