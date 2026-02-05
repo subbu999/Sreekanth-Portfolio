@@ -5,6 +5,7 @@ import { PreloaderComponent } from './core/preloader/preloader.component';
 import { PreloaderService } from './core/services/preloader.service';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeroComponent } from './sections/hero/hero.component';
+import { ServicesComponent } from './sections/services/services.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { HeroComponent } from './sections/hero/hero.component';
     NgIf, 
     PreloaderComponent,
     HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    ServicesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,0 +1,21 @@
+<section class="services-section" id="services">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="eyebrow">SERVICES</span>
+            <h2>My Quality Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <article class="service-card" *ngFor="let s of services">
+                <div class="service-icon">
+                    <img [src]="s.icon" [alt]="s.title" />
+                </div>
+
+                <h3 class="service-title">{{ s.title }}</h3>
+                <p class="service-desc">{{ s.desc }}</p>
+            </article>
+        </div>
+
+    </div>
+</section>
