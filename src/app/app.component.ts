@@ -6,6 +6,7 @@ import { PreloaderService } from './core/services/preloader.service';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeroComponent } from './sections/hero/hero.component';
 import { ServicesComponent } from './sections/services/services.component';
+import { PortfolioComponent } from './sections/portfolio/portfolio.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { ServicesComponent } from './sections/services/services.component';
     PreloaderComponent,
     HeaderComponent,
     HeroComponent,
-    ServicesComponent
+    ServicesComponent,
+    PortfolioComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

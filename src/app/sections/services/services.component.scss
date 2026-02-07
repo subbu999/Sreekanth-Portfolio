@@ -5,7 +5,7 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .eyebrow {
@@ -14,7 +14,7 @@
   border-radius: 999px;
   font-size: var(--fs-body);
   color: var(--accent);
-  border: 1px solid var(--accent);
+  border: 1.5px solid var(--accent);
   margin: 16px auto;
 }
 
@@ -32,10 +32,12 @@
 }
 
 .service-card {    
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: #fff;
   border-radius: 18px;
-  padding: 36px 28px;
-  justify-content: center;
+  padding: 36px 28px;  
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
@@ -70,6 +72,7 @@
 
 .service-title {
   font-size: 1.25rem;
+  font-weight: 400;
   margin: 15px auto;
   text-align: center;
   color: var(--text-secondary);
@@ -80,6 +83,64 @@
   color: var(--text-secondary);
   line-height: 1.7;
   text-align: center;
+}
+// Read more btn
+.readmore-btn{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+}
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 22px;
+
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* Circle */
+.service-link .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease;
+}
+
+/* Arrow inside */
+.service-link .arrow {
+  font-size: 2rem;
+  transform: translateX(-12px);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover behavior */
+.service-link:hover {
+  color: var(--accent);
+}
+
+.service-link:hover .circle {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.service-link:hover .arrow {
+  transform: translateX(-5px);
 }
 
 @media (max-width: 768px) {
