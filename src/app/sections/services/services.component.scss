@@ -29,6 +29,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 36px;
+  // justify-content: center;
+  justify-items: center;
 }
 
 .service-card {    
@@ -108,15 +110,15 @@
 
 /* Circle */
 .service-link .circle {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid var(--text-primary);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
   transition:
     transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
@@ -125,9 +127,14 @@
 
 /* Arrow inside */
 .service-link .arrow {
+  display: block;          
+  line-height: 1; 
+  position: relative;
+  top: -1px;   
   align-self: center;
   font-size: 2rem;
   transform: translateX(-12px);
+
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -147,16 +154,7 @@
 
 /* Mobile */
 @media (max-width: 576px) {
-  .service-link .circle {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;  
-}
-  .service-link .arrow {
-  font-size: 1.5rem;
-  transform: translateX(-6px);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
- }
+  
 }
 
 /* Tablet */

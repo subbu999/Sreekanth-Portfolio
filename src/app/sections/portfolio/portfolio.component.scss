@@ -15,6 +15,7 @@
     border-radius: 999px;
     font-size: var(--fs-body);
     color: var(--accent);
+    margin: 16px auto;
 }
 
 .section-header h2 {
@@ -28,6 +29,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 36px;
+    justify-content: center;
 }
 
 .work-card {
@@ -99,4 +101,10 @@
 }
 .work-title{
     font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  
 }
