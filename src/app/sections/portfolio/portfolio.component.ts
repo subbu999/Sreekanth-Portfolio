@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit,ElementRef,QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -53,4 +53,55 @@ works = [
       skill2:'Art',
     },
   ];
+  skills = [
+    {
+      name: 'Adobe XD',
+      percent: 80,
+      icon: 'img/skill-icon-1.png',
+    },
+    {
+      name: 'Figma',
+      percent: 90,
+      icon: 'img/skill-icon-2.png',
+    },
+    {
+      name: 'WordPress',
+      percent: 70,
+      icon: 'img/skill-icon-3.png',
+    },
+    {
+      name: 'Photoshop',
+      percent: 80,
+      icon: 'img/skill-icon-4.png',
+    },
+    {
+      name: 'Sketch',
+      percent: 60,
+      icon: 'img/skill-icon-5.png',
+    },
+    {
+      name: 'Illustrator',
+      percent: 90,
+      icon: 'img/skill-icon-6.png',
+    },
+  ];
+  @ViewChildren('skillCard') cards!:QueryList<ElementRef>;
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log('true');
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target); // animate once (Antux style)
+          }
+        });
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    this.cards.forEach(card => observer.observe(card.nativeElement));
+  }
 }

@@ -28,6 +28,23 @@
                 <h3 class="work-title">{{ w.title }}</h3>
             </article>
         </div>
+        <!-- Top Skills section -->
+        <div class="section-header">
+            <span class="eyebrow">TOP SKILLS</span>
+            <h2>See My Expertise</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card" *ngFor="let skill of skills; let i = index" #skillCard
+                [style.--delay]="i * 80 + 'ms'">
+                <div class="skill-icon">
+                    <img [src]="skill.icon" [alt]="skill.name" />
+                </div>
 
+                <div>
+                    <div class="skill-percent">{{ skill.percent }}%</div>
+                    <div class="skill-name">{{ skill.name }}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
