@@ -1,0 +1,184 @@
+.resume-section {
+  padding: 120px 0;
+  background: var(--bg-main);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-pill {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+}
+
+/* Grid */
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.resume-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Resume List */
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Resume Item */
+
+.resume-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 24px;
+
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.resume-column.left .resume-item {
+  transform: translateX(-40px);
+}
+
+.resume-column.right .resume-item {
+  transform: translateX(40px);
+}
+
+.resume-item.in-view {
+  opacity: 1;
+  transform: translateX(0) !important;
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline .dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.timeline .line {
+  position: absolute;
+  top: 26px;
+  width: 2px;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+/* Card */
+
+.resume-card {
+  background: var(--bg-section);
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card-header h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-header .org {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.year {
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.desc {
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .resume-item {
+    grid-template-columns: 1fr;
+    transform: translateY(30px);
+  }
+
+  .resume-column.left .resume-item,
+  .resume-column.right .resume-item {
+    transform: translateY(30px);
+  }
+
+  .resume-item.in-view {
+    transform: translateY(0)!important;
+  }
+
+  .timeline {
+    display: none;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

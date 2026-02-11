@@ -7,6 +7,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HeroComponent } from './sections/hero/hero.component';
 import { ServicesComponent } from './sections/services/services.component';
 import { PortfolioComponent } from './sections/portfolio/portfolio.component';
+import { ResumeComponent } from './sections/resume/resume.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { PortfolioComponent } from './sections/portfolio/portfolio.component';
     HeaderComponent,
     HeroComponent,
     ServicesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ResumeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

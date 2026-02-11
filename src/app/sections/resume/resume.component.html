@@ -1,0 +1,71 @@
+<section class="resume-section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-pill">MY RESUME</span>
+            <h2>Experience & Education</h2>
+        </div>
+
+        <div class="resume-grid">
+
+            <!-- EXPERIENCE COLUMN -->
+            <div class="resume-column left">
+
+                <h3 class="column-title">Experience</h3>
+
+                <div class="resume-list">
+
+                    <div class="resume-item" *ngFor="let item of experience" #leftCard>
+                        <div class="timeline">
+                            <span class="dot"></span>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="resume-card">
+                            <div class="card-header">
+                                <div>
+                                    <h4>{{ item.title }}</h4>
+                                    <span class="org">{{ item.company }}</span>
+                                </div>
+                                <span class="year">{{ item.year }}</span>
+                            </div>
+
+                            <p class="desc">{{ item.description }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EDUCATION COLUMN -->
+            <div class="resume-column right">
+
+                <h3 class="column-title">Education</h3>
+
+                <div class="resume-list">
+
+                    <div class="resume-item" *ngFor="let item of education" #rightCard>
+                        <div class="timeline">
+                            <span class="dot"></span>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="resume-card">
+                            <div class="card-header">
+                                <div>
+                                    <h4>{{ item.title }}</h4>
+                                    <span class="org">{{ item.company }}</span>
+                                </div>
+                                <span class="year">{{ item.year }}</span>
+                            </div>
+
+                            <p class="desc">{{ item.description }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
