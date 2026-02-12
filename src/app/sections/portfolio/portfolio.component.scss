@@ -1,6 +1,6 @@
 .portfolio-section {
     padding: var(--section-padding);
-    background-color: var(--bg-main);
+    background-color: #ecf0f4;
 }
 
 .section-header {
@@ -30,6 +30,7 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     justify-content: center;
+    padding-bottom: 80px;
 }
 
 .works-card {
@@ -109,8 +110,9 @@
 }
 
 // Top Skills Styles
+
 .skills-grid{
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 40px;
   align-items: end;

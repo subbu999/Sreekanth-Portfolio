@@ -51,7 +51,7 @@ export class ResumeComponent implements AfterViewInit {
     {
       title: 'Web Development Certification',
       company: 'Online Academy',
-      year: '2018',
+      year: '2018-2019',
       description:
         'Completed intensive training in front-end frameworks and UI architecture.',
     },

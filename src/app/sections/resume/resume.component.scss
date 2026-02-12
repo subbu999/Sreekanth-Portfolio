@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -13,23 +13,24 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 
 .section-pill {
   display: inline-block;
   padding: 6px 18px;
   border-radius: 999px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: var(--fs-body);
   color: var(--accent);
-  margin-bottom: 16px;
+  border: 1.5px solid var(--accent);
+  margin: 16px auto;
 }
 
 .section-header h2 {
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 700;
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: var(--text-secondary);
 }
 
 /* Grid */
@@ -37,7 +38,7 @@
 .resume-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 70px;
 }
 
 .resume-column {
@@ -46,8 +47,9 @@
 }
 
 .column-title {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-left: 1rem;
   margin-bottom: 40px;
 }
 
@@ -94,25 +96,26 @@
 .timeline .dot {
   width: 12px;
   height: 12px;
-  background: var(--accent);
+  background: linear-gradient(to right, #00319a, #26b119);
   border-radius: 50%;
-  margin-top: 10px;
+  margin-top: 35px;
   z-index: 2;
 }
 
 .timeline .line {
   position: absolute;
-  top: 26px;
+  top: 50px;
   width: 2px;
   height: 100%;
-  background: #e5e7eb;
+  background: rgba(22, 69, 170, 0.2);
 }
+
 
 /* Card */
 
 .resume-card {
   background: var(--bg-section);
-  border-radius: 18px;
+  border-radius: 10px;
   padding: 28px 32px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
 }
@@ -127,8 +130,8 @@
 
 .card-header h4 {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-weight: 500;
+  margin-bottom: 0px;
 }
 
 .card-header .org {
@@ -137,7 +140,7 @@
 }
 
 .year {
-  background: var(--accent);
+  background: linear-gradient(to bottom right, #00319a, #26b119);
   color: #fff;
   padding: 6px 16px;
   border-radius: 999px;
@@ -181,4 +184,12 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .year {
+  background: linear-gradient(to bottom right, #00319a, #26b119);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  white-space: nowrap;
+}
 }
